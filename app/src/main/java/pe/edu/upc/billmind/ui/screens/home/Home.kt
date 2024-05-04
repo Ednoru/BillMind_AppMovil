@@ -1,5 +1,8 @@
 package pe.edu.upc.billmind.ui.screens.home
 
+import android.annotation.SuppressLint
+import androidx.compose.material3.BottomAppBar
+import androidx.compose.material3.Scaffold
 import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -8,34 +11,13 @@ import pe.edu.upc.billmind.ui.screens.signin.SignInScreen
 import pe.edu.upc.billmind.ui.screens.signup.SignUpScreen
 import pe.edu.upc.billmind.ui.screens.welcome.WelcomeScreen
 
+@SuppressLint("UnusedMaterial3ScaffoldPaddingParameter")
 @Composable
 fun Home() {
-    val navController = rememberNavController()
-
-    NavHost(navController = navController, startDestination = Routes.Welcome.route) {
-        composable(Routes.Welcome.route) {
-            WelcomeScreen(
-                onSignIn = {
-                    navController.navigate(Routes.SignIn.route)
-                },
-                onSignUp = {
-                    navController.navigate(Routes.SignUp.route)
-                }
-            )
-        }
-        composable(Routes.SignIn.route) {
-            SignInScreen {
-                navController.navigate(Routes.SignUp.route)
+    Scaffold {
+        BottomAppBar(
+            content = {
             }
-        }
-        composable(Routes.SignUp.route) {
-            SignUpScreen()
-        }
+        )
     }
-}
-
-sealed class Routes(val route: String) {
-    data object Welcome : Routes("Welcome")
-    data object SignIn : Routes("SignIn")
-    data object SignUp : Routes("SignUp")
 }

@@ -58,7 +58,7 @@ fun SignUpScreen() {
                     .fillMaxWidth()
                     .padding(4.dp),
                 onClick = {
-                    AuthRepository().signUp(
+                    /*AuthRepository.signUp(
                         ClientRequest(
                             name.value,
                             lastName.value,
@@ -68,7 +68,7 @@ fun SignUpScreen() {
                         )
                     ) {
 
-                    }
+                    }*/
                 }) {
                 Text(text = "Sign up")
             }
