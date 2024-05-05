@@ -37,7 +37,9 @@ fun BottomNavBar(
             Modifier
                 .fillMaxWidth()
                 .background(Color(0xFF0D47A1))
-                .padding(4.dp), Arrangement.SpaceBetween, Alignment.Bottom
+                .padding(4.dp),
+            horizontalArrangement = Arrangement.SpaceBetween,
+            verticalAlignment = Alignment.Bottom
         ) {
             IconButton(
                 onClick = onDebtsClick,
