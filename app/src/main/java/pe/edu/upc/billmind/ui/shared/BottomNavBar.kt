@@ -36,12 +36,10 @@ fun BottomNavBar(
         modifier = Modifier.fillMaxWidth()
     ) {
         Row(
-            modifier = Modifier
+            Modifier
                 .fillMaxWidth()
                 .background(Color(0xFF0D47A1))
-                .padding(4.dp),
-            horizontalArrangement = Arrangement.SpaceBetween,
-            verticalAlignment = Alignment.CenterVertically
+                .padding(4.dp), Arrangement.SpaceBetween, Alignment.Bottom
         ) {
             IconButton(
                 onClick = onDebtsClick,
@@ -114,13 +112,6 @@ fun BottomNavBar(
 
 @Preview
 @Composable
-fun PreviewBottomNavBar() {
-    MaterialTheme {
-        BottomNavBar(
-            onDebtsClick = {},
-            onAlertsClick = {},
-            onBalanceClick = {},
-            onProfileClick = {}
-        )
-    }
+fun BottomNavBarPreview() {
+    BottomNavBar({}, {}, {}, {})
 }

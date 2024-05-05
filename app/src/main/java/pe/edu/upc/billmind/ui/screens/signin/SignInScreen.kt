@@ -26,6 +26,7 @@ import pe.edu.upc.billmind.ui.viewmodels.AuthViewModel
 @Composable
 fun SignInScreen(
     authViewModel: AuthViewModel,
+    onSignComplete: () -> Unit,
     onSignUp: () -> Unit
 ) {
     val email = remember {
@@ -57,11 +58,11 @@ fun SignInScreen(
                 onClick = {
                     authViewModel.login(email.toString(), password.toString()){ success->
                         if(success){
-                            
+                            onSignComplete()
                         }
                         else{
-
-                            showError=true;
+                            //Message("Inicio de sesión fallido")
+                            showError = true
                         }
                     }
                 }) {
