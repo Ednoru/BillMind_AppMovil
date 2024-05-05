@@ -31,7 +31,7 @@ fun BottomNavBar(
     onProfileClick: () -> Unit
 ) {
     Surface(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.fillMaxWidth(),
     ) {
         Row(
             Modifier

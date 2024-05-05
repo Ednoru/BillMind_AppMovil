@@ -44,16 +44,56 @@ fun Routing() {
             SignUpScreen()
         }
         composable(Routes.Debts.route) {
-            DebtsScreen()
+            DebtsScreen(
+                onAlertScreen = {
+                    navController.navigate(Routes.Alerts.route)
+                },
+                onBalanceScreen = {
+                    navController.navigate(Routes.Balance.route)
+                },
+                onProfileScreen = {
+                    navController.navigate(Routes.Profile.route)
+                }
+            )
         }
         composable(Routes.Alerts.route) {
-            AlertsScreen()
+            AlertsScreen(
+                onDebtsScreen = {
+                    navController.navigate(Routes.Debts.route)
+                },
+                onBalanceScreen = {
+                    navController.navigate(Routes.Balance.route)
+                },
+                onProfileScreen = {
+                    navController.navigate(Routes.Profile.route)
+                }
+            )
         }
         composable(Routes.Balance.route) {
-            BalanceScreen()
+            BalanceScreen(
+                onDebtsScreen = {
+                    navController.navigate(Routes.Debts.route)
+                },
+                onAlertScreen = {
+                    navController.navigate(Routes.Alerts.route)
+                },
+                onProfileScreen = {
+                    navController.navigate(Routes.Profile.route)
+                }
+            )
         }
         composable(Routes.Profile.route) {
-            ProfileScreen()
+            ProfileScreen(
+                onDebtsScreen = {
+                    navController.navigate(Routes.Debts.route)
+                },
+                onAlertScreen = {
+                    navController.navigate(Routes.Alerts.route)
+                },
+                onBalanceScreen = {
+                    navController.navigate(Routes.Balance.route)
+                }
+            )
         }
     }
 }
