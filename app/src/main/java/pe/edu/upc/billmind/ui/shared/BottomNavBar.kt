@@ -27,10 +27,10 @@ import pe.edu.upc.billmind.R
 
 @Composable
 fun BottomNavBar(
-    onCuentasClick: () -> Unit,
-    onAlertasClick: () -> Unit,
+    onDebtsClick: () -> Unit,
+    onAlertsClick: () -> Unit,
     onBalanceClick: () -> Unit,
-    onPerfilClick: () -> Unit
+    onProfileClick: () -> Unit
 ) {
     Surface(
         modifier = Modifier.fillMaxWidth()
@@ -44,7 +44,7 @@ fun BottomNavBar(
             verticalAlignment = Alignment.CenterVertically
         ) {
             IconButton(
-                onClick = onCuentasClick,
+                onClick = onDebtsClick,
                 modifier = Modifier
                     .size(70.dp)
             ) {
@@ -61,7 +61,7 @@ fun BottomNavBar(
                 }
             }
             IconButton(
-                onClick = onAlertasClick,
+                onClick = onAlertsClick,
                 modifier = Modifier
                     .size(70.dp) // Tamaño adecuado para cada ícono
             ) {
@@ -93,7 +93,7 @@ fun BottomNavBar(
                 }
             }
             IconButton(
-                onClick = onPerfilClick,
+                onClick = onProfileClick,
                 modifier = Modifier
                     .size(70.dp)
             ) {
@@ -117,10 +117,10 @@ fun BottomNavBar(
 fun PreviewBottomNavBar() {
     MaterialTheme {
         BottomNavBar(
-            onCuentasClick = {},
-            onAlertasClick = {},
+            onDebtsClick = {},
+            onAlertsClick = {},
             onBalanceClick = {},
-            onPerfilClick = {}
+            onProfileClick = {}
         )
     }
 }

@@ -21,18 +21,14 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import pe.edu.upc.billmind.R
+import pe.edu.upc.billmind.ui.shared.BackgroundImg
 
 @Composable
 fun WelcomeScreen(
     onSignIn: () -> Unit,
     onSignUp: () -> Unit
 ) {
-    Image(
-        painter = painterResource(id = R.drawable.fondo), // Asegúrate de tener una imagen llamada 'Fondo' en tu carpeta 'res/drawable'
-        contentDescription = null,
-        modifier = Modifier.fillMaxSize(),
-        contentScale = ContentScale.Crop // Esto hará que tu imagen se redimensione para llenar el tamaño máximo manteniendo su relación de aspecto
-    )
+    BackgroundImg()
     Column(
         modifier = Modifier
             .fillMaxSize(),

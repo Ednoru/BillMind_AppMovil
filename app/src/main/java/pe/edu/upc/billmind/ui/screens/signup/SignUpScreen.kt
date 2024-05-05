@@ -15,6 +15,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import pe.edu.upc.billmind.data.remote.ClientRequest
 import pe.edu.upc.billmind.data.repository.AuthRepository
+import pe.edu.upc.billmind.ui.shared.BackgroundImg
 import pe.edu.upc.billmind.ui.shared.InputTextField
 import pe.edu.upc.billmind.ui.shared.PasswordTextField
 
@@ -40,6 +41,7 @@ fun SignUpScreen() {
     }
 
     Scaffold { paddingValues ->
+        BackgroundImg()
         Column(
             modifier = Modifier
                 .padding(paddingValues)

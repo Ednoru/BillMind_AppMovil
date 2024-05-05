@@ -17,6 +17,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import pe.edu.upc.billmind.ui.shared.BackgroundImg
 import pe.edu.upc.billmind.ui.shared.InputTextField
 import pe.edu.upc.billmind.ui.shared.PasswordTextField
 import pe.edu.upc.billmind.ui.viewmodels.AuthViewModel
@@ -38,6 +39,7 @@ fun SignInScreen(
 
 
     Scaffold { paddingValues ->
+        BackgroundImg()
         Column(
             modifier = Modifier
                 .padding(paddingValues)
