@@ -13,8 +13,8 @@ import pe.edu.upc.billmind.ui.viewmodels.AuthViewModel
 fun Routing() {
     val navController = rememberNavController()
 
-    NavHost(navController = navController, startDestination = Routes.Home.route) {
-        composable(Routes.Home.route) {
+    NavHost(navController = navController, startDestination = Routes.Welcome.route) {
+        composable(Routes.Welcome.route) {
             WelcomeScreen(
                 onSignIn = {
                     navController.navigate(Routes.SignIn.route)
@@ -40,7 +40,8 @@ fun Routing() {
 }
 
 sealed class Routes(val route: String) {
-    data object Home : Routes("Home")
+    data object Welcome : Routes("Welcome")
     data object SignIn : Routes("SignIn")
     data object SignUp : Routes("SignUp")
+
 }
